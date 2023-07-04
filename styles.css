@@ -6,8 +6,9 @@
     --white: hsl(0, 0%, 100%); /* main heading, stats */
     --slightlyTransparentWhiteP: hsla(0, 0%, 100%, 0.75); /* main paragraph */
     --slightlyTransparentWhiteS: hsla(0, 0%, 100%, 0.6); /* stat headings */
+   
+    --softVioletT: hsla(277, 80%, 40%, 0.5); /* accent */
 
-    --softVioletT: hsla(277, 77%, 50%, 0.5); /* accent */
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -71,6 +72,9 @@ h1, .s_numbers {
 picture, source, img, li, .s_names {
     display: block;
 }
+picture, source, img {
+    width: 100%;
+}
 p, .s_names {
     font-size: 0.9375rem;
 }
@@ -101,7 +105,7 @@ p, .s_names {
         height: 100%;
     }
     .words {
-        margin: auto 122px auto 72px;
+        margin: 40px 122px auto 72px;
         text-align: left;
         grid-area: a;
     }
