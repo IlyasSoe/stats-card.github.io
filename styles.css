@@ -112,6 +112,9 @@ p, .s_names {
     p {
         margin: 0 0 52px;
     }
+    picture, source, img {
+    width: 100%;
+    }
     ul {
         display: flex;
     }
