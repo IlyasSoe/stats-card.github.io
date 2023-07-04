@@ -1,0 +1,117 @@
+:root {
+    --veryDarkBlue: hsl(233, 47%, 7%); /* main background */
+    --darkDesaturatedBlue: hsl(244, 38%, 16%); /* card background */
+    --softViolet: hsl(277, 64%, 61%); /* accent */
+
+    --white: hsl(0, 0%, 100%); /* main heading, stats */
+    --slightlyTransparentWhiteP: hsla(0, 0%, 100%, 0.75); /* main paragraph */
+    --slightlyTransparentWhiteS: hsla(0, 0%, 100%, 0.6); /* stat headings */
+
+    --softVioletT: hsla(277, 77%, 50%, 0.5); /* accent */
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: var(--veryDarkBlue);
+    place-content: center;
+    min-height: 100vh;
+    display: grid;
+}
+main {
+    background-color: var(--darkDesaturatedBlue);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 328px;
+}
+.image_card {
+    position: relative;
+}
+.end {   /* I have some problems with filter: hue-rotation(90deg); */
+    background-color: var(--softVioletT);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+.words {
+    text-align: center;
+}
+h1 {
+    margin: 44px auto 20px;
+}
+.color_word {
+    color: var(--softViolet);
+}
+p {
+    color: var(--slightlyTransparentWhiteP);
+    line-height: 1.6875;
+    margin: 10px 34px;
+}
+ul {
+    margin: 34px auto;
+    list-style: none;
+}
+li {
+    margin: 25px auto;
+}
+h1, p, .s_numbers {
+    font-family: 'Inter', sans-serif;
+}
+h1, .s_numbers {
+    color: var(--white);
+}
+.s_names {
+    color: var(--slightlyTransparentWhiteS);
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+}
+picture, source, img, li, .s_names {
+    display: block;
+}
+p, .s_names {
+    font-size: 0.9375rem;
+}
+@media screen and (max-width: 750px) { /* for browser settings accebility/Apperance */
+    main {
+        min-height: 781px;
+    }
+}
+
+/* Styling for desktop */
+
+@media screen and (min-width: 750px) {
+    main {
+        max-height: 447px;
+        width: 1110px;
+    }
+    .stats_card {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'a b';
+        grid-template-rows: 100%;
+        display: grid;
+        width: 100%;
+    }
+    .image_card {
+        grid-area: b;
+    }
+    .stats_card, picture {
+        height: 100%;
+    }
+    .words {
+        margin: auto 122px auto 72px;
+        text-align: left;
+        grid-area: a;
+    }
+    p {
+        margin: 0 0 52px;
+    }
+    ul {
+        display: flex;
+    }
+    li {
+        margin-left: 0;
+    }
+}
